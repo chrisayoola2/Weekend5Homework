@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:background="#00D4C2"
+             android:layout_height="match_parent"
+             tools:context=".AddEmployeeFragment">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/etfirstName"
+                  android:hint="Enter First Name"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Enter Last Name"
+                  android:id="@+id/etLastName"
+        />
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/etAddress"
+                  android:hint="Enter Street Address"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/etCity"
+                  android:hint="Enter City"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Enter State"
+                  android:id="@+id/etState"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/etZip"
+                  android:hint="Enter Zip"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Enter Tax ID"
+                  android:id="@+id/etTax"/>
+
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Enter Position"
+                  android:id="@+id/etPosition"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:id="@+id/SpinnerAddEmployee"
+                android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatSpinner>
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubmitEmployee"
+                android:onClick="onClick"
+                android:text="Submit"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvtester"
+                  android:textColor="#00D4C2"
+        />
+
+
+    </LinearLayout>
+
+</FrameLayout>
