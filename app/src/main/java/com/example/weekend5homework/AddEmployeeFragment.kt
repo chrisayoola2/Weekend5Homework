@@ -21,7 +21,10 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class AddEmployeeFragment : Fragment(){
+class AddEmployeeFragment : Fragment(),BackgroundTask.AsyncCallback{
+    override fun returnEmployee(employeeArray: ArrayList<Employee>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
 
     lateinit var departmentSpinner: Spinner
@@ -82,7 +85,7 @@ class AddEmployeeFragment : Fragment(){
                 Toast.makeText(context,"Please Select a Department!!",Toast.LENGTH_LONG).show()
             }else{
 
-            val backgroundTask = BackgroundTask(myView.context)
+            val backgroundTask = BackgroundTask(myView.context,this)
 
             backgroundTask.execute("add employee", firstName,lastName,address,city,state,zip, taxId, position,department)
             Log.d("TAG", "$firstName, $department")
